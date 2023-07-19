@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Helpers;
+
+use League\Fractal\TransformerAbstract;
+use Musonza\Chat\Models\Message;
+use Musonza\Chat\Models\Participation;
+
+class BookTransformer extends TransformerAbstract
+{
+    public function transform(Message $p)
+    {
+        return [
+            'id'      => (int) $p->id,
+        ];
+    }
+}
